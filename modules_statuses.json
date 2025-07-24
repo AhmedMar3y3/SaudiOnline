@@ -1,0 +1,18 @@
+{
+    "Dashboard": true,
+    "Accounts": true,
+    "Settings": true,
+    "Frontend": true,
+    "Roles": true,
+    "Backups": false,
+    "Articles": true,
+    "Pages": true,
+    "Countries": true,
+    "Installer": true,
+    "Deploy": true,
+    "Categories": true,
+    "Comments": true,
+    "Videos": true,
+    "Slieds": true,
+    "Teams": true
+}

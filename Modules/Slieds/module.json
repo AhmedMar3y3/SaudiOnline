@@ -1,0 +1,11 @@
+{
+    "name": "Slieds",
+    "alias": "slieds",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Slieds\\Providers\\SliedsServiceProvider"
+    ],
+    "files": []
+}
