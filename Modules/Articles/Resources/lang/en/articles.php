@@ -33,6 +33,7 @@ return [
         'category_id' => 'Article category',
         'empty' => 'No Data',
         'image' => 'Article Image',
+        'views' => 'Views Count',
     ],
     'dialogs' => [
         'delete' => [

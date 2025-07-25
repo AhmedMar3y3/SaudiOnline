@@ -12,6 +12,7 @@
             <tr>
                 <th>@lang('articles::articles.attributes.name')</th>
                 <th>@lang('articles::articles.attributes.category_id')</th>
+                <th>@lang('articles::articles.attributes.views')</th>
                 <th style="width: 160px">...</th>
             </tr>
         </thead>
@@ -28,6 +29,9 @@
                             class="text-decoration-none text-ellipsis">
                             {{ Illuminate\Support\Str::limit($article->category->name, $limit = 50, $end = '...') }}
                         </a>
+                    </td>
+                    <td>
+                        {{ $article->views }}
                     </td>
 
                     <td style="width: 160px">

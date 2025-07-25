@@ -33,6 +33,7 @@ return [
         '%content%' => 'محتوى المقال',
         'category_id' => 'فئة المقالة',
         'image' => 'صورة المقال',
+        'views' => 'عدد المشاهدات',
      ],
     'dialogs' => [
         'delete' => [
