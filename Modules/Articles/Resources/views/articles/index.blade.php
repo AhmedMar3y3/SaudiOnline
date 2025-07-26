@@ -48,4 +48,10 @@
         </tbody>
     @endcomponent
 
+    @if($articles->hasPages())
+        <div class="d-flex justify-content-center mt-3">
+            {{ $articles->appends(request()->query())->links() }}
+        </div>
+    @endif
+
 </x-layout>
