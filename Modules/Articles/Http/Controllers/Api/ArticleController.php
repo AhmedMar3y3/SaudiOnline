@@ -56,6 +56,7 @@ class ArticleController extends Controller
     {
         if ($article) {
             $article = $this->repository->find($article);
+            $article->increment('views');
 
             $data = new ArticleResource($article);
             return $this->sendResponse($data, 'success');
