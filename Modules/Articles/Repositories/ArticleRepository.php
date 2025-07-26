@@ -28,7 +28,7 @@ class ArticleRepository implements CrudRepository
      */
     public function all()
     {
-        return Article::filter($this->filter)->orderBy('id', 'DESC')->get();
+        return Article::filter($this->filter)->orderBy('id', 'DESC')->paginate(20);
     }
 
     /**
