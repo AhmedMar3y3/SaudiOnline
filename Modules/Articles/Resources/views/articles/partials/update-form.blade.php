@@ -10,6 +10,13 @@
 {{ BsForm::text('name')->attribute(['data-parsley-maxlength' => '191', 'data-parsley-minlength' => '3']) }}
 {{ BsForm::textarea('content')->rows(3)->attribute('class', 'form-control textarea')->attribute(['data-parsley-minlength' => '3']) }}
 
+@if (\Module::collections()->has('Categories'))
+    <select2 name="category_id" label="@lang('categories::categories.singular')" remote-url="{{ route('categories.select') }}"
+        @isset($admin)
+             value="{{ $admin->categories()->orderBy('id', 'desc')->first()->id ?? old('category_id') }}"
+             @endisset
+        :required="true"></select2>
+@endif
 <div class="form-group">
 
     <label for="image">{{ trans('articles::articles.attributes.image') }}</label>
