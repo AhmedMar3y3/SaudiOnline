@@ -40,7 +40,7 @@ class ArticleRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'content' => ['required', 'string', 'max:300000'],
+            'content' => ['required', 'string', 'max:3000000'],
             'category_id' => ['required', 'integer', 'exists:categories,id'],
             'image' => ['required', 'mimes:jpeg,jpg,png', 'max:1000'],
         ];
