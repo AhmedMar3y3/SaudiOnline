@@ -7,6 +7,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
 use Modules\Articles\Entities\Article;
 use Modules\Articles\Repositories\ArticleRepository;
+use Modules\Articles\Transformers\ArticleIndexResource;
 use Modules\Articles\Transformers\ArticleResource;
 use Modules\Support\Traits\ApiTrait;
 
@@ -39,7 +40,7 @@ class ArticleController extends Controller
         $articles = $this->repository->all();
 
         if (count($articles) > 0) {
-            $data = ArticleResource::collection($articles)->response()->getData(true);
+            $data = ArticleIndexResource::collection($articles)->response()->getData(true);
             return $this->sendResponse($data, 'success');
         }
 
